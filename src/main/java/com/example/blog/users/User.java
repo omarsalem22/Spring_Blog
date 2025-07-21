@@ -32,12 +32,14 @@ public class User {
     private String lastName;
 
     @Column(nullable = false)
-    @Email(message = "Email must be valid" )
+    @Email(message = "Email must be valid")
     private String email;
 
     @Column(nullable = false)
     private String password;
     @Column(columnDefinition = "TEXT")
     private String bio;
+    @Column(nullable = false)
+    private String role = "USER";
 
 }
