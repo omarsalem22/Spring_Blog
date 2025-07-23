@@ -40,6 +40,6 @@ public class User {
     @Column(columnDefinition = "TEXT")
     private String bio;
     @Column(nullable = false)
-    private String role = "USER";
+    private String role ;
 
 }

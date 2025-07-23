@@ -9,6 +9,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-  jwt:
-  secret: your-secure-secret-key
-  expiration: 86400000       
+jwt:
+  secret: +4N1FJayl5/8SGqEOV9l86StUZOS01lq6co0J392bco=
+  expiration: 86400000
