@@ -13,7 +13,7 @@ import com.example.blog.posts.service.PostService;
 import com.example.blog.users.User;
 
 @RestController
-@RequestMapping("/api/post")
+@RequestMapping("/api/posts")
 public class PostController {
     private final PostService postService;
 

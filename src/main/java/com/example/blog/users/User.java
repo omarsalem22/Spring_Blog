@@ -39,6 +39,7 @@ public class User {
     private String password;
     @Column(columnDefinition = "TEXT")
     private String bio;
+    
     @Column(nullable = false)
     private String role ;
 
