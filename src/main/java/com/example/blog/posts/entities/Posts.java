@@ -2,7 +2,7 @@ package com.example.blog.posts.entities;
 
 import java.time.LocalDateTime;
 
-import com.example.blog.users.User;
+import com.example.blog.users.entities.User;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.blog.posts.entities.Posts;
 import com.example.blog.posts.service.PostService;
-import com.example.blog.users.User;
+import com.example.blog.users.entities.User;
 
 @RestController
 @RequestMapping("/api/posts")

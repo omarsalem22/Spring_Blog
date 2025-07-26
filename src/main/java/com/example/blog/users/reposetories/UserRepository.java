@@ -3,7 +3,7 @@ package com.example.blog.users.reposetories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.blog.users.User;
+import com.example.blog.users.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {

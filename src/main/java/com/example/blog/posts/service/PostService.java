@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.blog.posts.entities.Posts;
 import com.example.blog.posts.reposetories.PostRepository;
-import com.example.blog.users.User;
+import com.example.blog.users.entities.User;
 
 import jakarta.transaction.Transactional;
 

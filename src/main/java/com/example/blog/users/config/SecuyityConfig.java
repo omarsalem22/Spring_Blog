@@ -17,17 +17,13 @@ public class SecuyityConfig {
           
     }
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-        .csrf(csrf ->csrf.disable())
-        .authorizeHttpRequests(auth -> auth.requestMatchers("/api/users/register")
-        .permitAll().requestMatchers("/api/posts", "/api/posts/recent", "/api/posts/search", "/api/posts/author/**")
-        .permitAll().
-        anyRequest().authenticated());
-
+            .authorizeHttpRequests(auth -> auth
+                .anyRequest().permitAll()
+            )
+            .csrf(csrf -> csrf.disable()); 
         return http.build();
-      
-
     }
 
 }
