@@ -2,6 +2,7 @@ package com.example.blog.users.controllers;
 
 import java.util.List;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.blog.users.dtos.LoginRequestDTO;
+import com.example.blog.users.dtos.LoginResponseDTO;
 import com.example.blog.users.dtos.UserRegistrationDto;
 import com.example.blog.users.dtos.UserResponseDTO;
 import com.example.blog.users.entities.User;
@@ -37,6 +40,18 @@ public class UserController {
 
         } catch (IllegalArgumentException e) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+    }
+    @PostMapping("/login")
+
+    public ResponseEntity<?> login(@RequestBody LoginRequestDTO loginDTO){
+        try {
+            LoginResponseDTO responseDTO=userService.loginUser(loginDTO);
+            return ResponseEntity.ok(responseDTO);
+
+            
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body("Login failed: " + e.getMessage());
         }
     }
 
